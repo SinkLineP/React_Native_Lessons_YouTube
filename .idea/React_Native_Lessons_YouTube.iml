@@ -5,6 +5,13 @@
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/TodoList/node_modules/@expo/cli/build/src/start/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/TodoList/node_modules/@expo/devcert/src/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/TodoList/node_modules/@expo/devcert/dist/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/TodoList/node_modules/@expo/prebuild-config/node_modules/expo-modules-autolinking/src/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/TodoList/node_modules/@expo/prebuild-config/node_modules/expo-modules-autolinking/build/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/TodoList/node_modules/expo-modules-autolinking/src/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/TodoList/node_modules/expo-modules-autolinking/build/platforms" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
