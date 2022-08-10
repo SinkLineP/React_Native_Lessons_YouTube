@@ -5,12 +5,7 @@ import ListItem from "./components/ListItem";
 import Form from "./components/Form";
 
 export default function App() {
-  const [listOfItems, setListOfItems] = useState([
-    {text: "Купить молоко", key: '1'},
-    {text: "Купить хлеб", key: '2'},
-    {text: "Купить рыбу", key: '3'},
-    {text: "Купить печенье", key: '4'},
-  ]);
+  const [listOfItems, setListOfItems] = useState([]);
 
   const addHandler = (text) => {
     if (text !== "") {
@@ -34,16 +29,24 @@ export default function App() {
       <Header />
       <Form addHandler={addHandler}/>
       <View>
-        <TouchableWithoutFeedback>
-          <FlatList data={listOfItems} renderItem={({ item }) => (
-            <ListItem el={item} deleteHandler={deleteHandler} />
-          )}/>
-        </TouchableWithoutFeedback>
+        {listOfItems.length === 0 ?
+          <Text style={styles.info}>Создайте первую задачу, чтобы начать ваш продуктивный день...</Text>
+        :
+          <TouchableWithoutFeedback>
+            <FlatList data={listOfItems} renderItem={({ item }) => (
+              <ListItem el={item} deleteHandler={deleteHandler} />
+            )}/>
+          </TouchableWithoutFeedback>
+        }
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-
+  info: {
+    color: "gray",
+    textAlign: "center",
+    marginTop: "10%"
+  }
 });

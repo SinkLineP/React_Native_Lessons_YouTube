@@ -13,11 +13,11 @@ const styles = StyleSheet.create({
   main: {
     paddingTop: 60,
     height: 100,
-    backgroundColor: "silver"
+    backgroundColor: "green"
   },
   text: {
     fontSize: 18,
-    color: "red",
+    color: "white",
     textAlign: "center",
   }
 });
