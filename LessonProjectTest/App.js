@@ -1,36 +1,25 @@
-import {StyleSheet, Text, SafeAreaView, StatusBar, View, Platform} from 'react-native';
+import {StyleSheet, View, SafeAreaView, StatusBar} from 'react-native';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-
-      <View style={styles.box}>
-        <Text>Hello</Text>
-      </View>
-
-
+    <SafeAreaView style={styles.mainBlock}>
+      <View style={[styles.box, {backgroundColor: "yellow"}]}/>
+      <View style={[styles.box, {backgroundColor: "red", height: 200, alignSelf: "flex-start"}]}/>
+      <View style={[styles.box, {backgroundColor: "green"}]}/>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
 
-const simpleStyle = {backgroundColor: "green", color: "yellow"}
-
 const styles = StyleSheet.create({
-  container: {
+  mainBlock: {
     flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center"
   },
-  box: {
-    backgroundColor: '#efc51e',
-    width: '50%',
-    height: 150,
-    opacity: 0.9,
-    borderWidth: 2,
-    borderColor: "green",
-    borderStyle: "dotted",
-    position: "absolute",
-    top: Platform.OS === "ios" ? 150 : 30,
-    left: 150
+  box : {
+    width: 100,
+    height: 100,
   }
 });
