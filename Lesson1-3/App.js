@@ -2,7 +2,7 @@ import {StyleSheet, Text, SafeAreaView, StatusBar, Button, Alert, Image, Touchab
 
 export default function App() {
   const handleTextPress = () => console.log("Test click text");
-  const handleButtonPress = () => Alert.alert("Опрос", "Ты нуб?", [
+  const handleButtonPress = () => Alert.alert("Опрос", "Ты Хорош?", [
     {text: "Да", onPress: () => console.log("Yes Button")},
     {text: "Нет", onPress: () => console.log("No Button")},
   ]);
